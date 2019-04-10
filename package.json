@@ -1,0 +1,18 @@
+{
+  "name": "b2w-api-test",
+  "version": "0.0.1",
+  "description": "B2W Backend API nodejs test",
+  "main": "server.js",
+  "author": "Vítor Roque",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.0"
+  }
+}

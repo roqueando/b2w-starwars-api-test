@@ -58,6 +58,10 @@ module.exports = {
 		}
 	},
 
+	/**
+	 * Find Planet By Name
+	 * @description Busca um planeta pelo nome solicitado
+	 */
 	async findPlanetByName(req, res) {
 		try {
 
@@ -76,6 +80,10 @@ module.exports = {
 		}
 	},
 
+	/**
+	 * Find Planet By Id
+	 * @description Busca um planeta pelo _id
+	 */
 	async findByPlanetById(req, res) {
 		try {
 
@@ -94,6 +102,10 @@ module.exports = {
 		}
 	},
 
+	/**
+	 * Remove Planet
+	 * @description Remove um planeta pelo seu _id
+	 */
 	async removePlanet(req, res) {
 		try {
 
@@ -104,6 +116,16 @@ module.exports = {
 			});
 
 			return res.send({ result: "Planeta deletado com sucesso." });
+
+		} catch (err) {
+			return res.status(400).send({ error: { description: err.message } })
+		}
+	},
+
+	async listAllPlanets(req, res) {
+		try {
+			const planets = await Planet.find({});
+			return res.send({ result: { planets } });
 
 		} catch (err) {
 			return res.status(400).send({ error: { description: err.message } })

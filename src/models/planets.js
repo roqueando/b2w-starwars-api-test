@@ -14,7 +14,7 @@ const PlanetSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	filmQuantityAppears: {
+	countFilms: {
 		type: Number,
 		required: false
 	},
@@ -26,3 +26,5 @@ const PlanetSchema = new mongoose.Schema({
 });
 
 const Planet = mongoose.model('Planet', PlanetSchema);
+
+module.exports = Planet;

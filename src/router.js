@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const Planet = require('../src/models/planets');
+const PlanetController = require('./controllers/PlanetController');
+// Routes
 
-// Rotas
-
-
+router.post('/planet/create', PlanetController.addPlanet);
 
 module.exports = app => app.use('/v1', router);

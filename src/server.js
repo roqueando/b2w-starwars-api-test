@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }));
 
-require('router.js')(app);
+require('./router')(app);
 
 app.listen(3000, () => {
     console.log('Star Wars API [ONLINE] on PORT:3000');
